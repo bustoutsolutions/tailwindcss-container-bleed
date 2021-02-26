@@ -1,0 +1,33 @@
+{
+  "name": "tailwindcss-container-bleed",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "description": "Tailwind CSS plugin to generate container bleed utilities",
+  "author": "Bust Out",
+  "contributors": [
+    "Eric Grossnickle"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/bustoutsolutions/tailwindcss-container-bleed",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "plugin",
+    "tailwindcss-plugin"
+  ],
+  "scripts": {
+    "build:demo": "node scripts/build-demo.js"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=2.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "clean-css": "^4.2.1",
+    "postcss": "^8.1.7",
+    "tailwindcss": "^2.0.3"
+  }
+}

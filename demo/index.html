@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bustoutsolutions/tailwindcss-container-bleed examples</title>
+
+    <link rel="stylesheet" href="tailwind.min.css" />
+  </head>
+  <body>
+    <header class="container py-12">
+      <h1 class="mb-12 text-5xl font-bold">Tailwind CSS Container Bleed Plugin</h1>
+      <p class="mt-6">The following examples use this <a href="https://tailwindcss.com/docs/container">container</a> configuration:</p>
+      <pre class="max-w-lg mt-6 p-6 text-white bg-gray-800 rounded-2xl"><code class="text-pink-500">container: {
+  center: true,
+  padding: {
+    DEFAULT: '1rem',
+    md: '2rem',
+    lg: '4rem'
+  }
+}</code></pre>
+<p class="mt-6"><strong>Note:</strong> The default <code>xl</code> and <code>2xl</code> screen breakpoints are disabled in this demo.</p>
+    </header>
+    <main class="container py-12 bg-gray-100 rounded-2xl">
+      <h2 class="text-4xl font-bold">Container</h2>
+      <code class="text-pink-500">.container</code>
+      <section>
+        <div class="mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">No Bleed</h5>
+        </div>
+      </section>
+      <section class="mt-12">
+        <div class="max-w-2xl">
+          <h3 class="text-3xl font-bold">Bleed</h3>
+          <p class="text-gray-500">Uses a negative margin to bleed into the container padding and margin. Then applies the container padding and margin back as padding to itself so the content remains aligned. Use the classes in parentheses to apply the negative margin or padding individually.</p>
+        </div>
+        <div class="bx-container mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left & Right</h5>
+          <code class="text-pink-500">.bx-container</code> <code class="ml-3 text-gray-500"><small>( .-mx-container .px-container )</small></code>
+        </div>
+        <div class="bl-container mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left</h5>
+          <code class="text-pink-500">.bl-container</code> <code class="ml-3 text-gray-500"><small>( .-ml-container .pl-container )</small></code>
+        </div>
+        <div class="br-container mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Right</h5>
+          <code class="text-pink-500">.br-container</code> <code class="ml-3 text-gray-500"><small>( .-mr-container .pr-container )</small></code>
+        </div>
+      </section>
+      <section class="mt-12">
+        <div class="max-w-2xl">
+          <h3 class="text-3xl font-bold">Bleed – Padding Only</h3>
+          <p class="text-gray-500">Uses a negative margin to bleed into the container padding. Then applies the container padding back as padding to itself so the content remains aligned. Use the classes in parentheses to apply the negative margin or padding individually.</p>
+        </div>
+        <div class="bx-container-padding mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left & Right – Padding Only</h5>
+          <code class="text-pink-500">.bx-container-padding</code> <code class="ml-3 text-gray-500"><small>( .-mx-container-padding .px-container-padding )</small></code>
+        </div>
+        <div class="bl-container-padding mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left – Padding-Only</h5>
+          <code class="text-pink-500">.bl-container-padding</code> <code class="ml-3 text-gray-500"><small>( .-ml-container-padding .pl-container-padding )</small></code>
+        </div>
+        <div class="br-container-padding mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Right – Padding-Only</h5>
+          <code class="text-pink-500">.br-container-padding</code> <code class="ml-3 text-gray-500"><small>( .-mr-container-padding .pr-container-padding )</small></code>
+        </div>
+      </section>
+      <section class="mt-12">
+        <div class="max-w-2xl">
+          <h3 class="text-3xl font-bold">Bleed – Margin Only</h3>
+          <p class="text-gray-500">Uses a negative margin to bleed into the container margin. Then applies the container margin back as padding to itself so the content remains aligned. Use the classes in parentheses to apply the negative margin or padding individually.</p>
+        </div>
+        <div class="bx-container-margin mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left & Right – Margin Only</h5>
+          <code class="text-pink-500">.bx-container-margin</code> <code class="ml-3 text-gray-500"><small>( .-mx-container-margin .px-container-margin )</small></code>
+        </div>
+        <div class="bl-container-margin mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Left – Margin-Only</h5>
+          <code class="text-pink-500">.bl-container-margin</code> <code class="ml-3 text-gray-500"><small>( .-mx-container-margin .px-container-margin )</small></code>
+        </div>
+        <div class="br-container-margin mt-6 py-4 bg-gray-300">
+          <h5 class="text-xl">Bleed Right – Margin-Only</h5>
+          <code class="text-pink-500">.br-container-margin</code> <code class="ml-3 text-gray-500"><small>( .-mx-container-margin .px-container-margin )</small></code>
+        </div>
+      </section>
+    </main>
+    <main class="container mt-12 py-12 bg-gray-100 rounded-t-2xl">
+      <h2 class="text-4xl font-bold">More Examples</h2>
+      <div class="mt-6 max-w-2xl">
+        <p class="text-gray-500 text-xl leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor mauris, ultrices quis lacinia eu, aliquam eu odio. Nulla facilisi. Fusce accumsan scelerisque felis, et efficitur elit. Sed gravida nunc congue neque.</p>
+      </div>
+      <section class="bx-container relative flex items-center h-96 mt-12">
+        <div class="relative z-10 flex-1 text-center">
+          <h3 class="text-white text-5xl font-bold">Full Bleed</h3>
+          <p class="mt-6 text-white text-xl leading-8">This section has the class <code>.bx-container</code> applied to break out of the container to the edges of the browser window. The padding re-applied to the section keeps the content width consistent with the rest of the container.</code></p>
+        </div>
+        <img class="absolute left-0 top-0 w-full h-full object-cover" src="https://placekitten.com/1440/384">
+      </section>
+      <section class="bx-container-padding relative flex items-center h-96 mt-12 bg-blue-500">
+        <div class="relative z-10 flex-1 text-center">
+          <h3 class="text-white text-5xl font-bold">Full Bleed – Padding Only</h3>
+          <p class="mt-6 text-white text-xl leading-8">This section has the class <code>.bx-container-padding</code> applied to break out of the container padding only. The padding re-applied to the section keeps the content width consistent with the rest of the container.</code></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
