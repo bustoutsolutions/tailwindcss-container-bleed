@@ -22,7 +22,31 @@ function buildDemoFile(filename) {
           }
         }
       },
+      corePlugins: [
+        'preflight',
+        'container',
+        'alignItems',
+        'backgroundColor',
+        'borderRadius',
+        'display',
+        'flex',
+        'fontFamily',
+        'fontSize',
+        'fontWeight',
+        'height',
+        'inset',
+        'margin',
+        'maxWidth',
+        'objectFit',
+        'padding',
+        'position',
+        'textColor',
+        'textAlign',
+        'width',
+        'zIndex'
+      ],
       plugins: [require('../src/index.js')],
+      variants: []
     }),
     require('autoprefixer'),
   ])

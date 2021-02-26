@@ -2,7 +2,21 @@
 
 This plugin generates utilities classes to bleed into container padding and margin at each screen breakpoint.
 
-*Note:* This plugin relies on CSS custom properties.
+[View live demo](https://htmlpreview.github.io/?https://github.com/bustoutsolutions/tailwindcss-container-bleed/blob/main/demo/index.html)
+
+```html
+<main class="container">
+  <div class="bx-container">
+    This element breaks out of the container to the edges of the browser
+    window. Padding is applied so this content will remain inline with other
+    container content.
+  </div>
+  <div class="bx-container-padding">
+    This element breaks out of the container padding only. Padding is applied
+    so this content will remain inline with other container content.
+  </div>
+</main>
+```
 
 ## Usage
 
@@ -11,7 +25,7 @@ This plugin works in conjunction with the native [Container](https://tailwindcss
 There are, however, a few options that can be configured when the plugin is included:
 
 ```js
-tailwind.config.js
+// tailwind.config.js
 
 module.exports = {
   plugins: [
@@ -30,9 +44,11 @@ module.exports = {
 
 Currently, this plugin fully works best when `container.center = true`.
 
+*Note:* This plugin relies on CSS custom properties.
+
 ## Utilities
 
-The following utility classes are generated:
+The following utility classes are generated. They can also be used with `@apply`.
 
 ### Bleed
 
