@@ -2,7 +2,7 @@
 
 This plugin generates utilities classes to bleed into container padding and margin at each screen breakpoint.
 
-[View live demo](https://htmlpreview.github.io/?https://github.com/bustoutsolutions/tailwindcss-container-bleed/blob/main/docs/index.html)
+[View live demo](https://bustoutsolutions.github.io/tailwindcss-container-bleed)
 
 ```html
 <main class="container">
@@ -17,6 +17,33 @@ This plugin generates utilities classes to bleed into container padding and marg
   </section>
   <!-- See more utilities in demo -->
 </main>
+```
+
+## Installation
+
+Install the plugin from npm:
+
+```sh
+# Using npm
+npm install --save-dev tailwindcss-container-bleed
+
+# Using Yarn
+yarn add -D tailwindcss-container-bleed
+```
+
+Then add the plugin to your `tailwind.config.js` file:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('tailwindcss-container-bleed'),
+    // ...
+  ],
+}
 ```
 
 ## Usage
