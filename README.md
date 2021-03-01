@@ -6,21 +6,22 @@ This plugin generates utilities classes to bleed into container padding and marg
 
 ```html
 <main class="container">
-  <div class="bx-container">
+  <section class="bx-container">
     This element breaks out of the container to the edges of the browser
     window. Padding is applied so this content will remain inline with other
     container content.
-  </div>
-  <div class="bx-container-padding">
+  </section>
+  <section class="bx-container-padding">
     This element breaks out of the container padding only. Padding is applied
     so this content will remain inline with other container content.
-  </div>
+  </section>
+  <!-- See more utilities in demo -->
 </main>
 ```
 
 ## Usage
 
-This plugin works in conjunction with the native [Container](https://tailwindcss.com/docs/container) component and its [horizontal padding options](https://tailwindcss.com/docs/container#horizontal-padding). There are no additional options to be configured in the theme.
+This plugin works in conjunction with the native [container](https://tailwindcss.com/docs/container) component and its [horizontal padding options](https://tailwindcss.com/docs/container#horizontal-padding). There are no additional options to be configured in the theme.
 
 There are, however, a few options that can be configured when the plugin is included:
 
@@ -52,7 +53,13 @@ The following utility classes are generated. They can also be used with `@apply`
 
 ### Bleed
 
+The bleed classes are a combination of the respective negative margin and padding utilites below. For example, `.bx-container` is equal to `.-mx-container .px-container`.
+
 ```
+.bl-container
+.br-container
+.bx-container
+
 .b-container-padding
 .bl-container-padding
 .br-container-padding
@@ -64,15 +71,15 @@ The following utility classes are generated. They can also be used with `@apply`
 .bl-container-margin
 .br-container-margin
 .bx-container-margin
-
-.bl-container
-.br-container
-.bx-container
 ```
 
 ### Negative Margins
 
 ```
+.-ml-container
+.-mr-container
+.-mx-container
+
 .-m-container-padding
 .-ml-container-padding
 .-mr-container-padding
@@ -84,15 +91,15 @@ The following utility classes are generated. They can also be used with `@apply`
 .-ml-container-margin
 .-mr-container-margin
 .-mx-container-margin
-
-.-ml-container
-.-mr-container
-.-mx-container
 ```
 
 ### Padding
 
 ```
+.pl-container
+.pr-container
+.px-container
+
 .p-container-padding
 .pl-container-padding
 .pr-container-padding
@@ -104,8 +111,4 @@ The following utility classes are generated. They can also be used with `@apply`
 .pl-container-margin
 .pr-container-margin
 .px-container-margin
-
-.pl-container
-.pr-container
-.px-container
 ```
