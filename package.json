@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-container-bleed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "description": "Tailwind CSS plugin to generate container bleed utilities",
   "author": "Bust Out",
