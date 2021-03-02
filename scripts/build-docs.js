@@ -3,7 +3,7 @@ const postcss = require('postcss')
 const tailwind = require('tailwindcss')
 const CleanCSS = require('clean-css')
 
-function buildDemoFile(filename) {
+function buildDocsFile(filename) {
   return postcss([
     tailwind({
       theme: {
@@ -52,16 +52,16 @@ function buildDemoFile(filename) {
   ])
     .process('@tailwind base; @tailwind components; @tailwind utilities;', {
       from: null,
-      to: `./demo/${filename}.css`,
+      to: `./docs/${filename}.css`,
       map: false,
     })
     .then((result) => {
-      fs.writeFileSync(`./demo/${filename}.css`, result.css)
+      fs.writeFileSync(`./docs/${filename}.css`, result.css)
       return result
     })
     .then((result) => {
       const minified = new CleanCSS().minify(result.css)
-      fs.writeFileSync(`./demo/${filename}.min.css`, minified.styles)
+      fs.writeFileSync(`./docs/${filename}.min.css`, minified.styles)
     })
     .catch((error) => {
       console.log(error)
@@ -70,6 +70,6 @@ function buildDemoFile(filename) {
 
 console.info('Building CSS...')
 
-Promise.all([buildDemoFile('tailwind')]).then(() => {
-  console.log('Finished building demo CSS.')
+Promise.all([buildDocsFile('tailwind')]).then(() => {
+  console.log('Finished building docs CSS.')
 })

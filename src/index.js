@@ -11,7 +11,9 @@ module.exports = plugin.withOptions(function(options = {}) {
       currentScreenVar = options.currentScreenVar ?? '--current-screen',
       currentScreenDefault = options.currentScreenDefault ?? screenWidthDefault,
       paddingVar = options.paddingVar ?? '--container-padding',
-      paddingDefault = theme('container.padding.DEFAULT', undefined)
+      paddingDefault = typeof theme('container.padding') === 'string'
+        ? theme('container.padding')
+        : theme('container.padding.DEFAULT', theme('container.padding.default'))
     
     
     /* Base */
