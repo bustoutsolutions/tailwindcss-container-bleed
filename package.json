@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-container-bleed",
   "version": "0.1.2",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "description": "Tailwind CSS plugin to generate container bleed utilities",
   "author": "Bust Out",
   "contributors": [
@@ -19,12 +19,17 @@
     "tailwindcss-plugin"
   ],
   "scripts": {
-    "build:docs": "node scripts/build-docs.js"
+    "build": "babel src --out-dir dist --presets=@babel/env",
+    "build:docs": "npm run build && node scripts/build-docs.js",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "tailwindcss": ">=1.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
     "autoprefixer": "^10.0.2",
     "clean-css": "^4.2.1",
     "postcss": "^8.1.7",

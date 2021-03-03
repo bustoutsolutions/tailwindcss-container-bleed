@@ -45,7 +45,7 @@ function buildDocsFile(filename) {
         'width',
         'zIndex'
       ],
-      plugins: [require('../src/index.js')],
+      plugins: [require('../dist/index.js')],
       variants: []
     }),
     require('autoprefixer'),
@@ -68,7 +68,7 @@ function buildDocsFile(filename) {
     })
 }
 
-console.info('Building CSS...')
+console.info('Building docs CSS...')
 
 Promise.all([buildDocsFile('tailwind')]).then(() => {
   console.log('Finished building docs CSS.')
